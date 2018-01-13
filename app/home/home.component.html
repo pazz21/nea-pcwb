@@ -1,0 +1,90 @@
+﻿
+
+
+<head>
+    <title>NEA - Production Control Work Bench</title>
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="http://themewagon.com/wp-content/themes/wagoncore/css/demo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link href="homepage.css" rel="stylesheet">
+
+</head>
+<div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      
+      <a class="navbar-brand" href="#"><img src="nea-logo.gif" alt="NEA Logo" height="40" width="150"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Update Dates <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mshpdates">Generate Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/report">Contacts</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <button class="btn btn-outline "><a [routerLink]="['/login']">Logout</a></button>
+      </div>
+    </nav>
+</div>
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Hi {{currentUser.firstName}}!</h1>
+        <p class="lead">You can update the frs9 and mshpstat dates in this tab.</p>
+      </div>
+
+    </main><!-- /.container -->
+
+<form>
+<table style="width:100%">
+  <tr>
+    <th>SEQUENCE</th>
+    <th>APPLICATION</th> 
+    <th>UPDATE DATE</th>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td><label>1 FRS9 : </label></td> 
+    <td><input type="date" name="frs9"></td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td><label>MSHPSTAT : </label></td> 
+    <td><input type="date" name="mshpstat1"></td>
+  </tr>
+  <tr>
+    <td>02</td>
+    <td><label>MSHPSTAT : </label></td> 
+    <td><input type="date" name="mshpstat2"></td>
+  </tr>
+</table>
+<div class="text-right">
+<button class="btn btn-outline-success text-center " type="submit">Submit</button>
+</div>
+    </form>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
